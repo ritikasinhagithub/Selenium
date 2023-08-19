@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Get Source Code') {
             steps {
-                git credentialsId: '291a3c49-fa9f-409c-ad87-cae9c219fcf6', url: 'https://github.com/veerpatil/JenkinsDemo.git'
+               git branch: 'main', url: 'https://github.com/ritikasinhagithub/Selenium.git'
                 echo 'Hello World'
             }
         }
@@ -26,7 +26,7 @@ pipeline {
                 {
                     steps
                             {
-                                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '', reportFiles: 'target/surefire-reports/Extent*.html', reportName: 'Pipeline', reportTitles: ''])
+                                echo 'published'
                             }
                 }
     }
