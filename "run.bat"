@@ -1,1 +1,1 @@
-java -cp bin;lib/* org.testng.TestNG testng.xml
+mvn clean test −DxmlFilePath=org.testng.TestNG testng.xml
